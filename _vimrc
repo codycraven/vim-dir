@@ -31,21 +31,12 @@ set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 
 " Helpful commands
-map <F2> :NERDTreeToggle<CR>
-map <F3> :TlistToggle<CR>
+noremap <F2> :NERDTreeToggle<CR>
+noremap <F3> :TlistToggle<CR>
 
 " Window movement, hold ctrl and then use arrows
-noremap <C-Right> <C-W><Right>
-noremap <C-Down> <C-W><Down>
-noremap <C-Left> <C-W><Left>
-noremap <C-Up> <C-W><Up>
+noremap <C-l> <C-W>l
+noremap <C-j> <C-W>j
+noremap <C-h> <C-W>h
+noremap <C-k> <C-W>k
 
-" Change movement keys to something tolerable
-" Visual, select, and standard movement to jkl;
-noremap ; l
-vnoremap ; l
-noremap l j
-vnoremap l j
-noremap j h
-vnoremap j h
-" K not needed to remap as we keep it to go up.
