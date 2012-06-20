@@ -34,9 +34,14 @@ set directory=~/.vim/tmp
 noremap <F2> :NERDTreeToggle<CR>
 noremap <F3> :TlistToggle<CR>
 
-" Window movement, hold ctrl and then use arrows
+" Window movement
 noremap <C-l> <C-W>l
 noremap <C-j> <C-W>j
 noremap <C-h> <C-W>h
 noremap <C-k> <C-W>k
 
+" Window resize
+if bufwinnr(1)
+  noremap + <C-W>+
+  noremap - <C-W>-
+endif
