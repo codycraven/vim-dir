@@ -42,6 +42,8 @@ noremap <C-k> <C-W>k
 
 " Window resize
 if bufwinnr(1)
-  noremap + <C-W>+
-  noremap - <C-W>-
+  noremap <C-Down> :exe "res -1"<CR>
+  noremap <C-Up> :exe "res +1"<CR>
+  noremap <C-Right> :exe "vertical res +1"<CR>
+  noremap <C-Left> :exe "vertical res -1"<CR>
 endif
