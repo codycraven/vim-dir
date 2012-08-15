@@ -25,6 +25,9 @@ set nonumber            " Don't show line numbers
 set cursorline          " Show current line highighted
 highlight CursorLine term=none cterm=none ctermbg=grey
 
+" Ensure syntax highlighting is accurate.
+autocmd BufEnter * :syntax sync fromstart
+
 " Prevent temporary and backup file clutter.
 set backup
 set backupdir=~/.vim/backup
