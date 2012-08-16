@@ -7,6 +7,7 @@ set tabstop=2
 set shiftwidth=2
 set cinkeys=0{,0},:,0#,!^F
 set pastetoggle=<F2>
+set mouse=a
 
 " Non-visible character display
 set list
