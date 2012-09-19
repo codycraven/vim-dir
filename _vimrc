@@ -7,7 +7,6 @@ set tabstop=2
 set shiftwidth=2
 set cinkeys=0{,0},:,0#,!^F
 set pastetoggle=<F2>
-set mouse=a
 set foldmethod=indent
 set foldnestmax=10
 set foldlevel=1
