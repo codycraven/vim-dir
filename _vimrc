@@ -31,6 +31,13 @@ highlight CursorLine term=none cterm=none ctermbg=grey
 " Ensure syntax highlighting is accurate.
 autocmd BufEnter * :syntax sync fromstart
 
+" Highlight characters after 80.
+if exists('+colorcolumn')
+  set colorcolumn=80
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
+
 " Prevent temporary and backup file clutter.
 set backup
 set backupdir=~/.vim/backup
