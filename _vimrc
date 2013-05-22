@@ -25,13 +25,14 @@ set ruler               " Show ruler
 set showmode            " Show the current mode
 
 set nonumber            " Don't show line numbers
-set cursorline          " Show current line highighted
-highlight CursorLine term=none cterm=none ctermbg=grey
+set cursorline          " Show current line highight
+highlight CursorLine term=none cterm=none ctermbg=Gray
 
 " Ensure syntax highlighting is accurate.
 autocmd BufEnter * :syntax sync fromstart
 
 " Highlight characters after 80.
+highlight ColorColumn ctermbg=Gray
 if exists('+colorcolumn')
   set colorcolumn=80
 else
