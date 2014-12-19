@@ -1,0 +1,4 @@
+# Ignore Vundle plugins.
+bundle/*
+# Except for the Vundle submodule to make setup easier:
+!bundle/Vundle.vim
