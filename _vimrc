@@ -19,15 +19,16 @@ call vundle#end() " required
 filetype plugin indent on     " required
 
 " Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just
+" :PluginList - lists configured plugins
+" :PluginInstall - installs plugins; append `!` to update or just
 " :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+" :PluginClean - confirms removal of unused plugins; append `!` to auto-approve removal
 "
 " " see :h vundle for more details or wiki for FAQ
 
 
+set backspace=2 " make backspace work like other apps
 set showmode
 set showcmd
 set cindent
@@ -35,8 +36,6 @@ set ttyfast
 set smarttab  " tab and backspace are smart
 set autoindent smartindent
 set expandtab
-set tabstop=2
-set shiftwidth=2
 set cinkeys=0{,0},:,0#,!^F
 set pastetoggle=<F2>
 set foldmethod=indent
@@ -63,16 +62,15 @@ set list
 highlight NonText guifg=grey ctermfg=grey
 highlight SpecialKey guifg=grey ctermfg=grey
 
-set backspace=2         " Smarter backspace
-set magic               " Enable extended Regex
-set nocompatible        " Turn off full vi compatibility
-set noerrorbells        " Turn off error bells
-set ruler               " Show ruler
-set showmode            " Show the current mode
-set hlsearch            " Show find highlighting
-set relativenumber      " Show relative line numbers
-set number              " Make active line display absolute number
-set cursorline          " Show current line highighted
+set magic " Enable extended Regex
+set nocompatible " Turn off full vi compatibility
+set noerrorbells " Turn off error bells
+set ruler " Show ruler
+set showmode " Show the current mode
+set hlsearch " Show find highlighting
+set relativenumber " Show relative line numbers
+set number " Make active line display absolute number
+set cursorline " Show current line highighted
 " Map leader
 let mapleader=","
 
@@ -89,19 +87,31 @@ set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 
 " Helpful commands
-noremap <F2> :NERDTreeToggle<CR>
+nnoremap <F2> :NERDTreeToggle<CR>
+let g:NERDTreeDirArrows=0
+
+" Spacing sizes
+" Default to 2 spaces
+set ts=2 " tabstop
+set sw=2 " shiftwidth
+set sts=2 " softtabstop
+
+" Switch from 2 to 4 spaces
+nnoremap <M-F6> :set ts=2 sw=2 sts=2 noet<CR> \| :retab!<CR> \| :set ts=4 sw=4 sts=4 et<CR> \| :retab<CR>
+" Switch from 4 to 2 spaces
+nnoremap <M-F7> :set ts=4 sw=4 sts=4 noet<CR> \| :retab!<CR> \| :set ts=2 sw=2 sts=2 et<CR> \| :retab<CR>
 
 " Window movement
-noremap <C-l> <C-W>l
-noremap <C-j> <C-W>j
-noremap <C-h> <C-W>h
-noremap <C-k> <C-W>k
+nnoremap <C-l> <C-W>l
+nnoremap <C-j> <C-W>j
+nnoremap <C-h> <C-W>h
+nnoremap <C-k> <C-W>k
 
 " Window resize
 if bufwinnr(1)
-  noremap <C-Down> :exe "res -4"<CR>
-  noremap <C-Up> :exe "res +4"<CR>
-  noremap <C-Right> :exe "vertical res +4"<CR>
-  noremap <C-Left> :exe "vertical res -4"<CR>
+  nnoremap <C-Down> :exe "res -4"<CR>
+  nnoremap <C-Up> :exe "res +4"<CR>
+  nnoremap <C-Right> :exe "vertical res +4"<CR>
+  nnoremap <C-Left> :exe "vertical res -4"<CR>
 endif
 
