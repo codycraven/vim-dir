@@ -1,3 +1,6 @@
+set nocompatible " improved
+filetype off  " required
+
 " Vundle
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -9,6 +12,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'goatslacker/mango.vim'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 " scripts from http://vim-scripts.org/vim/scripts.html
 Plugin 'The-NERD-tree'
 
@@ -63,7 +68,6 @@ highlight NonText guifg=grey ctermfg=grey
 highlight SpecialKey guifg=grey ctermfg=grey
 
 set magic " Enable extended Regex
-set nocompatible " Turn off full vi compatibility
 set noerrorbells " Turn off error bells
 set ruler " Show ruler
 set showmode " Show the current mode
@@ -100,12 +104,6 @@ set sts=2 " softtabstop
 nnoremap <M-F6> :set ts=2 sw=2 sts=2 noet<CR> \| :retab!<CR> \| :set ts=4 sw=4 sts=4 et<CR> \| :retab<CR>
 " Switch from 4 to 2 spaces
 nnoremap <M-F7> :set ts=4 sw=4 sts=4 noet<CR> \| :retab!<CR> \| :set ts=2 sw=2 sts=2 et<CR> \| :retab<CR>
-
-" Window movement
-nnoremap <C-l> <C-W>l
-nnoremap <C-j> <C-W>j
-nnoremap <C-h> <C-W>h
-nnoremap <C-k> <C-W>k
 
 " Window resize
 if bufwinnr(1)
