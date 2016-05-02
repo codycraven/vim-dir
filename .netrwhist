@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/etc/vpnc'
+let g:netrw_dirhist_2='/var/www/vm.sandcastle.bonniercorp.com/sites/all/modules/contrib/disqus'
+let g:netrw_dirhist_3='/etc/vpnc'
+let g:netrw_dirhist_4='/home/vagrant/.vim'

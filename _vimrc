@@ -79,7 +79,7 @@ set cursorline " Show current line highighted
 let mapleader=","
 
 " Make 81st column stand out
-highlight ColorColumn ctermbg=magenta
+highlight ColorColumn ctermfg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
 
 " Ensure syntax highlighting is accurate.
