@@ -44,6 +44,7 @@ set foldlevel=1
 set shell=bash
 set scrolloff=7
 set sidescrolloff=7
+set backupcopy=yes " Make file watching work
 
 " Fix colors not working.
 set background=dark
