@@ -34,7 +34,6 @@ filetype plugin indent on     " required
 
 
 set backspace=2 " make backspace work like other apps
-set showmode
 set showcmd
 set cindent
 set ttyfast
@@ -45,7 +44,7 @@ set cinkeys=0{,0},:,0#,!^F
 set pastetoggle=<F2>
 set foldmethod=indent
 set foldnestmax=10
-set foldlevel=1
+set foldlevel=2
 set shell=bash
 set scrolloff=7
 set sidescrolloff=7
@@ -74,7 +73,6 @@ set ruler " Show ruler
 set showmode " Show the current mode
 set hlsearch " Show find highlighting
 set relativenumber " Show relative line numbers
-set number " Make active line display absolute number
 set cursorline " Show current line highighted
 " Map leader
 let mapleader=","
