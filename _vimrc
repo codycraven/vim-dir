@@ -3,10 +3,10 @@ filetype off  " required
 
 " Vundle
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set rtp+=$VIMDIR/bundle/Vundle.vim
+call vundle#begin($VIMDIR.'/bundle/Vundle.vim')
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " scripts from GitHub repos
 Plugin 'tpope/vim-fugitive'
@@ -17,7 +17,7 @@ Plugin 'mxw/vim-jsx'
 " scripts from http://vim-scripts.org/vim/scripts.html
 Plugin 'The-NERD-tree'
 
-" see https://github.com/gmarik/Vundle.vim for more
+" see https://github.com/VundleVim/Vundle.vim for more
 
 " All Plugins must be added before the following line:
 call vundle#end() " required
@@ -86,8 +86,8 @@ autocmd BufEnter * :syntax sync fromstart
 
 " Prevent temporary and backup file clutter.
 set backup
-set backupdir=~/.vim/backup
-set directory=~/.vim/tmp
+set backupdir=$VIMDIR/backup
+set directory=$VIMDIR/tmp
 
 " Helpful commands
 nnoremap <F2> :NERDTreeToggle<CR>
