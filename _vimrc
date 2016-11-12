@@ -1,10 +1,11 @@
 set nocompatible " improved
 filetype off  " required
 
+let vimdir = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 " Vundle
 " set the runtime path to include Vundle and initialize
-set rtp+=$VIMDIR/bundle/Vundle.vim
-call vundle#begin($VIMDIR.'/bundle/Vundle.vim')
+let &rtp = &rtp.','.vimdir.'/bundle/Vundle.vim'
+call vundle#begin(vimdir.'/bundle/Vundle.vim')
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
@@ -86,8 +87,8 @@ autocmd BufEnter * :syntax sync fromstart
 
 " Prevent temporary and backup file clutter.
 set backup
-set backupdir=$VIMDIR/backup
-set directory=$VIMDIR/tmp
+let &backupdir=vimdir.'/backup'
+let &directory=vimdir.'/tmp'
 
 " Helpful commands
 nnoremap <F2> :NERDTreeToggle<CR>
