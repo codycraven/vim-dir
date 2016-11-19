@@ -13,6 +13,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'goatslacker/mango.vim'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'editorconfig/editorconfig-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 " scripts from http://vim-scripts.org/vim/scripts.html
