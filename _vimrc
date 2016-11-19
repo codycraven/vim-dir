@@ -16,8 +16,9 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 " scripts from http://vim-scripts.org/vim/scripts.html
-Plugin 'The-NERD-tree'
 
 " see https://github.com/VundleVim/Vundle.vim for more
 
